@@ -2,8 +2,9 @@
 from sprint_1.src.database_connection import DatabaseConnectionObject
 from sprint_1.src.datacube import DatacubeObject
 
-server_url = "https://example-wcps-server.com"
+server_url = "https://ows.rasdaman.org/rasdaman/ows"
 dbc = DatabaseConnectionObject(server_url)
+dbc.establish_connection()
 
 # Initialize a datacube object
 datacube = DatacubeObject(dbc, "MODIS_Land_Surface_Temp")
